@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_j_bVUEp5Ee2H3I1y7PFbeA" name="Lab3Diagrams">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_kFdr4Ep5Ee2H3I1y7PFbeA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Bds7wEp7Ee2H3I1y7PFbeA" name="Book">
+    <generalization xmi:type="uml:Generalization" xmi:id="_QCwQ4Ez9Ee27LdCScJCivg" general="_nUJ9kEsKEe27LdCScJCivg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZtXVMEqxEe2ktoF7FsZIQg" name="title" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_aF5xAEqxEe2ktoF7FsZIQg" name="author" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ag31wEqxEe2ktoF7FsZIQg" name="person" visibility="private" type="_16tXQEsKEe27LdCScJCivg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_PkrbEEsLEe27LdCScJCivg" name="isAvailable" visibility="public">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Rnw6YExOEe27LdCScJCivg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_awkPQEsMEe27LdCScJCivg" name="isString" visibility="public" concurrency="guarded">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xIybsExPEe27LdCScJCivg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PjEG8EsKEe27LdCScJCivg" name="Student">
+    <generalization xmi:type="uml:Generalization" xmi:id="_wHnJ8Ez8Ee27LdCScJCivg" general="_16tXQEsKEe27LdCScJCivg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kDLVAEsKEe27LdCScJCivg" name="Employee" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_PkjCwEsMEe27LdCScJCivg" name="iD" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_yvivEE24Ee2huun9bW7DUA" name="person" type="_16tXQEsKEe27LdCScJCivg" association="_yvXI4E24Ee2huun9bW7DUA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yvj9ME24Ee2huun9bW7DUA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yvkkQE24Ee2huun9bW7DUA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_W9niEEsMEe27LdCScJCivg" name="borrowBook" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Jls2gExQEe27LdCScJCivg" type="_wPXoQEsOEe27LdCScJCivg" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_SRapcExQEe27LdCScJCivg" name="b1" type="_Bds7wEp7Ee2H3I1y7PFbeA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_XQfawEsMEe27LdCScJCivg" name="returnBook">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZF2xsExQEe27LdCScJCivg" type="_wPXoQEsOEe27LdCScJCivg" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_eBF8oExQEe27LdCScJCivg" name="b1" type="_Bds7wEp7Ee2H3I1y7PFbeA"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nUJ9kEsKEe27LdCScJCivg" name="Library">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gOt6AEsMEe27LdCScJCivg" name="books" visibility="private" type="_TrmQUEsPEe27LdCScJCivg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_z-hFcEsMEe27LdCScJCivg" name="findBook" visibility="public" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_DunOsExNEe27LdCScJCivg" name="title">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TW5LIExNEe27LdCScJCivg" type="_Bds7wEp7Ee2H3I1y7PFbeA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_p6lNQEsKEe27LdCScJCivg" name="Prefessor">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2-0y8E24Ee2huun9bW7DUA" name="employee" type="_kDLVAEsKEe27LdCScJCivg" association="_2-y9wE24Ee2huun9bW7DUA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2-0y8U24Ee2huun9bW7DUA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2-1aAE24Ee2huun9bW7DUA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_16tXQEsKEe27LdCScJCivg" name="Person" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_zuJjoEsLEe27LdCScJCivg" name="name" visibility="private" aggregation="shared">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_1rezAEsLEe27LdCScJCivg" name="maxBooks" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_L3hXYEsMEe27LdCScJCivg" name="borrowBook" visibility="public" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0qesMEsPEe27LdCScJCivg" type="_wPXoQEsOEe27LdCScJCivg" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kuxp0EsQEe27LdCScJCivg" name="b1" type="_Bds7wEp7Ee2H3I1y7PFbeA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MOZmUEsMEe27LdCScJCivg" name="returnBook">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bP6g4EsQEe27LdCScJCivg" name="b1" type="_Bds7wEp7Ee2H3I1y7PFbeA"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_dOXxoEsQEe27LdCScJCivg" type="_wPXoQEsOEe27LdCScJCivg" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_wPXoQEsOEe27LdCScJCivg" name="Void"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_Eh5GQEsPEe27LdCScJCivg" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_GSycIEsPEe27LdCScJCivg" name="String"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_MhhPQEsPEe27LdCScJCivg" name="boolean" visibility="public"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_TrmQUEsPEe27LdCScJCivg" name="ArrayList&lt;Book>"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_y-4lMExQEe27LdCScJCivg" name="University">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2OFsIExQEe27LdCScJCivg" name=" librarie" visibility="private" type="_AQFVgExREe27LdCScJCivg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_AQFVgExREe27LdCScJCivg" name="ArrayList&lt;Library>"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8P9b0Ez8Ee27LdCScJCivg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dSVJME0AEe27LdCScJCivg" memberEnd="_dSYzkE0AEe27LdCScJCivg _dSaBsE0AEe27LdCScJCivg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dSXlcE0AEe27LdCScJCivg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dSXlcU0AEe27LdCScJCivg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_dSYzkE0AEe27LdCScJCivg" name="book" type="_Bds7wEp7Ee2H3I1y7PFbeA" association="_dSVJME0AEe27LdCScJCivg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_dSaBsE0AEe27LdCScJCivg" name="person" type="_16tXQEsKEe27LdCScJCivg" association="_dSVJME0AEe27LdCScJCivg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yvXI4E24Ee2huun9bW7DUA" memberEnd="_yvivEE24Ee2huun9bW7DUA _yvkkQU24Ee2huun9bW7DUA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yvg54E24Ee2huun9bW7DUA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yvhg8E24Ee2huun9bW7DUA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yvkkQU24Ee2huun9bW7DUA" name="employee" type="_kDLVAEsKEe27LdCScJCivg" association="_yvXI4E24Ee2huun9bW7DUA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2-y9wE24Ee2huun9bW7DUA" memberEnd="_2-0y8E24Ee2huun9bW7DUA _2-1aAU24Ee2huun9bW7DUA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2-0L4E24Ee2huun9bW7DUA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2-0L4U24Ee2huun9bW7DUA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2-1aAU24Ee2huun9bW7DUA" name="prefessor" type="_p6lNQEsKEe27LdCScJCivg" association="_2-y9wE24Ee2huun9bW7DUA"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_kWYK0Ep7Ee2H3I1y7PFbeA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kWbOIEp7Ee2H3I1y7PFbeA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
