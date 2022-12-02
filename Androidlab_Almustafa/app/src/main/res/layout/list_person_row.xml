@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--The rows of courses display the name, professor, classroom and string representing the schedule
+of the course-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_person_border"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/row_person_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/row_person_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="5dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/row_person_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="5dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/row_person_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="5dp"
+        android:textSize="20dp" />
+
+</LinearLayout>
